@@ -169,7 +169,8 @@ jQuery.browser.mobile = jQuery.browser.android || jQuery.browser.blackberry || j
 					flapLabel.html(txt).css({whiteSpace:"noWrap"});
 					var orientation= this.options.textOrientation == "tb";
 					var labelH=extruder.find('.flapLabel').getFlipTextDim()[1];
-					extruder.find('.flapLabel').mbFlipText(orientation);
+                    var left = 13 + labelH;
+                    extruder.find('.flap').css({width: 5 + labelH, left: '-' + left + 'px'});
 				}else{
 					flapLabel.html(txt).css({whiteSpace:"noWrap"});
 				}
